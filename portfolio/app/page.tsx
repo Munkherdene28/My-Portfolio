@@ -1,7 +1,12 @@
+import HeroSection from "./components/homepage/hero-section";
+import Skills from "./components/homepage/skills";
+import ContactSection from "./components/homepage/contact"
 export default function Home() {
   return (
     <div>
-      <h1>Hello world</h1>
+      <HeroSection />
+      <Skills />
+      <ContactSection/>
     </div>
   );
 }
