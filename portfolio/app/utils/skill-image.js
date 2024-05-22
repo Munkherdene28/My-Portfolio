@@ -11,7 +11,11 @@ import postgresql from "/public/svg/skills/postgresql.svg";
 import react from "/public/svg/skills/react.svg";
 import tailwind from "/public/svg/skills/tailwind.svg";
 import typescript from "/public/svg/skills/typescript.svg";
-import git from "/public/svg/skills/git.svg";
+import github from "/public/svg/skills/github.svg";
+import apollo from "/public/svg/skills/apollo.svg";
+import nodeJS from "/public/svg/skills/nodeJS.svg";
+import postman from "/public/svg/skills/postman.svg";
+import expressJS from "/public/svg/skills/expressJS.svg";
 
 export const skillsImage = (skill) => {
   const skillID = skill.toLowerCase();
@@ -36,14 +40,24 @@ export const skillsImage = (skill) => {
       return postgresql;
     case "tailwind":
       return tailwind;
-    case "aws":
+    case "aws s3":
       return aws;
-    case "git":
-      return git;
+    case "github":
+      return github;
     case "graphql":
       return graphql;
     case "materialui":
       return materialui;
+    case "apollo":
+      return apollo;
+    case "graphql":
+      return graphql;
+    case "node js":
+      return nodeJS;
+    case "postman":
+      return postman;
+    case "express js":
+      return expressJS;
     default:
       break;
   }
