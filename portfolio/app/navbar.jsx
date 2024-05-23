@@ -7,7 +7,6 @@ function Navbar() {
         <div className="flex flex-shrink-0 items-center">
           <p className="text-[#16f2b3] text-3xl font-bold">Munkherdene</p>
         </div>
-
         <ul
           className="mt-4 flex h-screen max-h-0 w-full flex-col items-start text-sm opacity-0 md:mt-0 md:h-auto md:max-h-screen md:w-auto md:flex-row md:space-x-1 md:border-0 md:opacity-100"
           id="navbar-default"

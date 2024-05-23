@@ -5,6 +5,10 @@ import { useState } from "react";
 import { TbMailForward } from "react-icons/tb";
 import { toast } from "react-toastify";
 
+const serviceID = "service_yvyqeqk";
+const templateID = "template_i95bij2";
+const userID = "k1M6Kp2LM0kEQU7Z-";
+
 function Contact() {
   const [input, setInput] = useState({
     name: "",
@@ -18,27 +22,31 @@ function Contact() {
 
   const checkRequired = () => {
     if (input.email && input.message && input.name) {
-      setError({ ...error, required: false });
+      setError((prevError) => ({ ...prevError, required: false }));
     }
   };
 
   const handleSendMail = async (e) => {
     e.preventDefault();
     if (!input.email || !input.message || !input.name) {
-      setError({ ...error, required: true });
+      setError((prevError) => ({ ...prevError, required: true }));
       return;
-    } else if (error.email) {
+    }
+    if (error.email) {
       return;
-    } else {
-      setError({ ...error, required: false });
     }
 
-    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-    const options = { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY };
-
     try {
-      const res = await emailjs.send(serviceID, templateID, input, options);
+      const res = await emailjs.send(
+        serviceID,
+        templateID,
+        {
+          from_name: input.name,
+          from_email: input.email,
+          message: input.message,
+        },
+        userID
+      );
 
       if (res.status === 200) {
         toast.success("Message sent successfully!");
@@ -47,14 +55,16 @@ function Contact() {
           email: "",
           message: "",
         });
+      } else {
+        toast.error("Failed to send the message. Please try again.");
       }
     } catch (error) {
-      toast.error(error?.text || error);
+      toast.error(error?.text || "An error occurred. Please try again.");
     }
   };
 
   return (
-    <div className="">
+    <div>
       <p className="font-medium mb-5 text-[#16f2b3] text-xl uppercase">
         Contact with me
       </p>
@@ -89,7 +99,10 @@ function Contact() {
               onChange={(e) => setInput({ ...input, email: e.target.value })}
               onBlur={() => {
                 checkRequired();
-                setError({ ...error, email: !isValidEmail(input.email) });
+                setError((prevError) => ({
+                  ...prevError,
+                  email: !isValidEmail(input.email),
+                }));
               }}
             />
             {error.email && (

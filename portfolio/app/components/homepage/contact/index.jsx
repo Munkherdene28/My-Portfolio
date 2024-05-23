@@ -9,12 +9,7 @@ function ContactSection() {
   return (
     <div id="contact" className="my-12 lg:my-16 relative mt-24 text-white">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-        {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY &&
-        process.env.NEXT_PUBLIC_RECAPTCHA_SECRET_KEY ? (
-          <Contact />
-        ) : (
-          <Contact />
-        )}
+        <Contact />
         <div className="lg:w-3/4 ">
           <div className="flex flex-col gap-5 lg:gap-9">
             <p className="text-sm md:text-xl flex items-center gap-3">
