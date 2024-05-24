@@ -3,7 +3,7 @@ import { isValidEmail } from "../../../utils/check-email";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import { TbMailForward } from "react-icons/tb";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 
 const serviceID = "service_yvyqeqk";
 const templateID = "template_i95bij2";

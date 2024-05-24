@@ -9,8 +9,17 @@ import Link from "next/link";
 function ProjectSection() {
   return (
     <div id="projects">
+      <div className="flex justify-center my-5 lg:py-8">
+        <div className="flex items-center">
+          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
+          <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-xl rounded-md">
+            Projects
+          </span>
+          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
+        </div>
+      </div>
       <CardContainer className="inter-var">
-        <CardBody className="bg-[#0d1224] relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-white/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border ">
+        <CardBody className="bg-[#0d1224] relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-white/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border ">
           <CardItem
             translateZ="50"
             className="text-xl font-bold text-white dark:text-white"
