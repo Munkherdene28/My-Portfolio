@@ -5,9 +5,9 @@ import { useState } from "react";
 import { TbMailForward } from "react-icons/tb";
 import { toast } from "react-hot-toast";
 
-const serviceID = "service_yvyqeqk";
-const templateID = "template_i95bij2";
-const userID = "k1M6Kp2LM0kEQU7Z-";
+const serviceID = process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID;
+const templateID = process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID;
+const userID = process.env.NEXT_PUBLIC_EMAIL_JS_USER_ID;
 
 function Contact() {
   const [input, setInput] = useState({
