@@ -16,6 +16,8 @@ import apollo from "/public/svg/skills/apollo.svg";
 import nodeJS from "/public/svg/skills/nodeJS.svg";
 import postman from "/public/svg/skills/postman.svg";
 import expressJS from "/public/svg/skills/expressJS.svg";
+import cloudinary from "/public/svg/skills/cloudinary.svg";
+import monorepo from "/public/svg/skills/monorepo.svg";
 
 export const skillsImage = (skill) => {
   const skillID = skill.toLowerCase();
@@ -58,6 +60,10 @@ export const skillsImage = (skill) => {
       return postman;
     case "express js":
       return expressJS;
+    case "cloudinary":
+      return cloudinary;
+    case "monorepo":
+      return monorepo;
     default:
       break;
   }
