@@ -2,6 +2,7 @@ import { personalData } from "../../../utils/data/personal-data";
 import Link from "next/link";
 import { CiLocationOn } from "react-icons/ci";
 import { IoLogoGithub, IoMdCall } from "react-icons/io";
+import { FaInstagram } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
 import Contact from "./contact";
 

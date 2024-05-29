@@ -1,6 +1,7 @@
-import Navbar from "./navbar";
+import Navbar from "./components/navbar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import "./components/css/card.css";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 
