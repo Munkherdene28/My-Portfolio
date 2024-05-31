@@ -46,6 +46,19 @@ function ProjectSection() {
                   alt="thumbnail"
                 />
               </CardItem>
+              <div className="flex flex-wrap gap-3 mt-4">
+                {project.technology &&
+                  project.technology.map((tech, techIndex) => (
+                    <div className="bg-gradient-to-r to-pink-500 from-violet-600 p-[1px] rounded-lg hover:from-pink-500 hover:to-violet-600">
+                      <button
+                        key={techIndex}
+                        className="px-3 py-2 text-sm md:px-2 md:text-xs bg-[#0d1224] rounded-lg border-none text-center"
+                      >
+                        {tech}
+                      </button>
+                    </div>
+                  ))}
+              </div>
               <div className="mt-20 flex justify-between items-center">
                 <CardItem
                   translateZ={20}

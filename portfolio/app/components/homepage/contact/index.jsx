@@ -1,8 +1,6 @@
 import { personalData } from "../../../utils/data/personal-data";
 import Link from "next/link";
-import { CiLocationOn } from "react-icons/ci";
 import { IoLogoGithub, IoMdCall } from "react-icons/io";
-import { FaInstagram } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
 import Contact from "./contact";
 
@@ -20,20 +18,13 @@ function ContactSection() {
               />
               <span>{personalData.email}</span>
             </p>
-            {/* <p className="text-sm md:text-xl flex items-center gap-3">
+            <p className="text-sm md:text-xl flex items-center gap-3">
               <IoMdCall
                 className="bg-[#8b98a5] p-2 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
                 size={36}
               />
               <span>{personalData.phone}</span>
             </p>
-            <p className="text-sm md:text-xl flex items-center gap-3">
-              <CiLocationOn
-                className="bg-[#8b98a5] p-2 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
-                size={36}
-              />
-              <span>{personalData.address}</span>
-            </p> */}
           </div>
           <div className="mt-8 lg:mt-16 flex items-center gap-5 lg:gap-10">
             <Link target="_blank" href={personalData.github}>
