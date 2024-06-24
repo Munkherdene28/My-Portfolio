@@ -26,7 +26,7 @@ const projects = [
       "Typescript",
       "Express",
       "Tailwind",
-      "AWS S-3",
+      "AWS S3",
       "MongoDB",
     ],
     image: Ecommerce,
